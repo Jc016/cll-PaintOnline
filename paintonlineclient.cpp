@@ -6,6 +6,8 @@ PaintOnlineClient::PaintOnlineClient(QWidget *parent) :
     ui(new Ui::PaintOnlineClient)
 {
     ui->setupUi(this);
+    m_ZoneDessin = new ZoneDessin(ui->gvZoneDessin->viewport());
+
 
 
 }

@@ -2,6 +2,7 @@
 #define PAINTONLINECLIENT_H
 
 #include <QMainWindow>
+#include "zonedessin.h"
 
 namespace Ui {
     class PaintOnlineClient;
@@ -19,6 +20,7 @@ protected:
 
 private:
     Ui::PaintOnlineClient *ui;
+    ZoneDessin * m_ZoneDessin;
 
 };
 
