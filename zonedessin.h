@@ -4,6 +4,7 @@
 #include <QWidget>
 #include <QtGui>
 
+
 class ZoneDessin : public QWidget
 {
     Q_OBJECT
@@ -22,6 +23,13 @@ public:
 
         }
 
+        InfoPoint(QColor c, uint g, QPoint p)
+        {
+            Couleur = c;
+            Grosseur = g;
+            Position = p;
+        }
+
 
 
     };
@@ -29,7 +37,8 @@ public:
     QWidget * m_parent;
     QPoint m_PositionSouris;
     QPainter *painter;
-    QList <InfoPoint *> m_ListePoint;
+    QList <InfoPoint * > m_ListePoint;
+    int m_grosseur;
 protected:
 
 void enterEvent(QEvent *);
@@ -45,7 +54,10 @@ private:
 
 signals:
 
+
+
 public slots:
+    void GrosseurRecue(int);
 
 };
 

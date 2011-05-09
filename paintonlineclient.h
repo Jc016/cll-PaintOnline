@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "zonedessin.h"
 
+
 namespace Ui {
     class PaintOnlineClient;
 }
@@ -20,8 +21,18 @@ protected:
 
 private:
     Ui::PaintOnlineClient *ui;
-    ZoneDessin * m_ZoneDessin;
+    ZoneDessin*   m_ZoneDessin;
 
+signals:
+   void GrosseurEnvoie(int);
+
+
+private slots:
+
+
+private slots:
+    void on_pbCouleurPinceau_clicked();
+    void on_sbGrosseur_valueChanged(int );
 };
 
 #endif // PAINTONLINECLIENT_H
