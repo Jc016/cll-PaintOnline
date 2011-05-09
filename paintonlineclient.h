@@ -25,6 +25,7 @@ private:
 
 signals:
    void GrosseurEnvoie(int);
+   void CouleurEnvoie(QColor);
 
 
 private slots:
@@ -33,6 +34,7 @@ private slots:
 private slots:
     void on_pbCouleurPinceau_clicked();
     void on_sbGrosseur_valueChanged(int );
+
 };
 
 #endif // PAINTONLINECLIENT_H

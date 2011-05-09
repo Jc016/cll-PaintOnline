@@ -34,6 +34,7 @@ void ZoneDessin::mouseReleaseEvent(QMouseEvent *)
 
 void ZoneDessin::paintEvent(QPaintEvent *)
 {
+    m_InfoPoint = new InfoPoint(m_couleur,m_grosseur,m_position);
     if(m_SourisPresse)
     {
 
@@ -66,7 +67,8 @@ void ZoneDessin::enterEvent(QEvent *)
 
 void ZoneDessin::mouseMoveEvent(QMouseEvent * m)
 {
-    m_InfoPoint = new InfoPoint(Qt::black,m_grosseur,m->pos());
+    m_position = m->pos();
+    m_InfoPoint = new InfoPoint(m_couleur,m_grosseur,m->pos());
     m_parent->repaint(this->rect());
 
 }
@@ -74,4 +76,10 @@ void ZoneDessin::mouseMoveEvent(QMouseEvent * m)
 void ZoneDessin::GrosseurRecue(int i)
 {
     m_grosseur = i;
+}
+
+void ZoneDessin::CouleurRecu(QColor c)
+{
+    m_couleur = c;
+
 }

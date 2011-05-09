@@ -39,6 +39,8 @@ public:
     QPainter *painter;
     QList <InfoPoint * > m_ListePoint;
     int m_grosseur;
+    QColor m_couleur;
+    QPoint m_position;
 protected:
 
 void enterEvent(QEvent *);
@@ -58,6 +60,7 @@ signals:
 
 public slots:
     void GrosseurRecue(int);
+    void CouleurRecu(QColor);
 
 };
 
