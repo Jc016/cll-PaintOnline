@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QtGui>
+#include "threadclient.h"
 
 
 class ZoneDessin : public QWidget
@@ -35,12 +36,13 @@ public:
     };
     InfoPoint * m_InfoPoint;
     QWidget * m_parent;
-    QPoint m_PositionSouris;
     QPainter *painter;
-    QList <InfoPoint * > m_ListePoint;
+    QList <InfoPoint *> m_ListePoint;
     int m_grosseur;
     QColor m_couleur;
     QPoint m_position;
+    QPixmap * m_pixmap;
+    ThreadClient * m_ThClient;
 protected:
 
 void enterEvent(QEvent *);
@@ -48,6 +50,7 @@ void mousePressEvent(QMouseEvent *);
 void mouseReleaseEvent(QMouseEvent *);
 void mouseMoveEvent(QMouseEvent *);
 void paintEvent(QPaintEvent *);
+void mouseDoubleClickEvent(QMouseEvent *);
 
 private:
 
@@ -55,6 +58,8 @@ private:
 
 
 signals:
+
+    void EnvoieInfoPoint(InfoPoint);
 
 
 

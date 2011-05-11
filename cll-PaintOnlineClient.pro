@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 TARGET = cll-PaintOnlineClient
 TEMPLATE = app
@@ -12,9 +12,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         paintonlineclient.cpp \
-    zonedessin.cpp
+    zonedessin.cpp \
+    threadclient.cpp
 
 HEADERS  += paintonlineclient.h \
-    zonedessin.h
+    zonedessin.h \
+    threadclient.h
 
 FORMS    += paintonlineclient.ui

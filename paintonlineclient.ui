@@ -60,30 +60,17 @@
       <x>360</x>
       <y>450</y>
       <width>431</width>
-      <height>91</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="title">
      <string>Option de connexion</string>
     </property>
-    <widget class="QPushButton" name="pbCouleurUtilisateur">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
     <widget class="QCommandLinkButton" name="clbConnecteServeur">
      <property name="geometry">
       <rect>
        <x>100</x>
-       <y>50</y>
+       <y>60</y>
        <width>241</width>
        <height>41</height>
       </rect>
@@ -120,12 +107,15 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="text">
+      <string>Usager</string>
+     </property>
     </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>300</x>
-       <y>20</y>
+       <x>20</x>
+       <y>40</y>
        <width>21</width>
        <height>20</height>
       </rect>
@@ -134,20 +124,36 @@
       <string>IP:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="txtIp">
+    <widget class="QLineEdit" name="txtAdresse">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>20</y>
-       <width>91</width>
+       <x>150</x>
+       <y>40</y>
+       <width>141</width>
        <height>20</height>
       </rect>
      </property>
      <property name="text">
-      <string>127.127.127.127</string>
+      <string>0.0.0.0</string>
      </property>
      <property name="maxLength">
-      <number>16</number>
+      <number>15</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbCouleurUtilisateur">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> background-color: rgb(0,0,255)</string>
+     </property>
+     <property name="text">
+      <string/>
      </property>
     </widget>
    </widget>
